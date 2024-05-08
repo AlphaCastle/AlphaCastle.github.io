@@ -1,6 +1,6 @@
 // script.js
 
-const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
+const images = ['Image_1', 'Image_2', 'Image_3.jpg', 'Image_4.jpg'];
 let currentIndex = 0;
 
 function changeBackgroundImage() {
