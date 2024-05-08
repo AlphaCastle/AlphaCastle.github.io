@@ -7,6 +7,25 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="cssstyle.css">
+    <style>
+        #background-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: slide 1.5s infinite; /* Change '10s' to adjust slide duration */
+        }
+
+        @keyframes slide {
+            0% { background-image: url('image1.jpg'); }
+            25% { background-image: url('image2.jpg'); }
+            50% { background-image: url('image3.jpg'); }
+            75% { background-image: url('image4.jpg'); }
+            100% { background-image: url('image1.jpg'); }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,7 +48,21 @@
     </section>
 
     <!-- Other sections and content can be added here -->
+    <script>
+        const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];
+        let currentIndex = 0;
 
+        function changeBackgroundImage() {
+            const backgroundSlider = document.getElementById('background-slider');
+            backgroundSlider.style.backgroundImage = `url('${images[currentIndex]}')`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        changeBackgroundImage(); // Initial call
+        setInterval(changeBackgroundImage, 10000); // Call every 10 seconds
+    </script>
+
+    
     <footer>
         <p>&copy; 2024 Corransk. We dont have a CC yet.</p>
     </footer>
