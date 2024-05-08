@@ -38,10 +38,10 @@ header {
     color: #333;
 }
 
+/* Hero section styles */
 .hero {
-    background-image: url('https://www.hollywoodreporter.com/wp-content/uploads/2022/07/Print-Issue-23A-fea_proddesigncostume-Severance-Interior-Publicity-H-2022.jpg?w=1296');
-    background-size: cover;
-    background-position: center;
+    position: relative; /* Add position relative */
+    z-index: -1; /* Ensure the hero section is behind the background slider */
     color: #fff;
     text-align: center;
     padding: 100px 20px;
