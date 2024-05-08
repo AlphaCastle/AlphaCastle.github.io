@@ -10,4 +10,4 @@ function changeBackgroundImage() {
 }
 
 changeBackgroundImage(); // Initial call
-setInterval(changeBackgroundImage, 10000); // Call every 10 seconds
+setInterval(changeBackgroundImage, 1500); // Call every 10 seconds
