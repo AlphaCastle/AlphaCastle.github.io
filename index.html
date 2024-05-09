@@ -20,8 +20,27 @@
                 <li><a href="#">Our Brands</a></li>
                 <li><a href="#">Support</a></li>
             </ul>
+            <div class="login-container">
+                <button id="login-btn">Login</button>
+            </div>
         </nav>
     </header>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <!-- Login form -->
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    
 
     <section class="hero">
         <div class="hero-content">
