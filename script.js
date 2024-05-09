@@ -11,3 +11,27 @@ function changeBackgroundImage() {
 
 changeBackgroundImage(); // Initial call
 setInterval(changeBackgroundImage, 1500); // Call every 10 seconds
+
+}
+
+const modal = document.getElementById('login-modal');
+const loginBtn = document.getElementById('login-btn');
+
+// When the user clicks the login button, open the modal
+loginBtn.onclick = function() {
+    modal.style.display = 'block';
+}
+
+// Get the close button
+const closeBtn = document.getElementsByClassName('close')[0];
+
+// When the user clicks on the close button or outside of the modal, close it
+closeBtn.onclick = function() {
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
